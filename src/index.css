@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #0B0D17;
+    background-size: cover;
+    background-position: bottom center;
+    overflow-x: hidden;
+}
+
+body.home{
+    background-image: url("./assets/home/background-home-mobile.jpg");
+}
+
+@media (min-width: 35rem) {
+    body.home{
+        background-position: center center;
+        background-image: url("./assets/home/background-home-tablet.jpg");
+    }
+}
+
+@media (min-width: 45rem) {
+    body.home{
+        background-image: url("./assets/home/background-home-desktop.jpg");
+    }
+}
+
+body.destination{
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+}
+
+@media (min-width: 35rem) {
+    body.destination{
+        background-position: center center;
+        background-image: url("./assets/destination/background-destination-tablet.jpg");
+    }
+}
+
+@media (min-width: 45rem) {
+    body.destination{
+        background-image: url("./assets/destination/background-destination-desktop.jpg");
+    }
+}
+
+body.crew{
+    background-image: url("./assets/crew/background-crew-mobile.jpg");
+}
+
+@media (min-width: 35rem) {
+    body.crew{
+        background-position: center center;
+        background-image: url("./assets/crew/background-crew-tablet.jpg");
+    }
+}
+
+@media (min-width: 45rem) {
+    body.crew{
+        background-image: url("./assets/crew/background-crew-desktop.jpg");
+    }
+}
+
+body.technology{
+    background-image: url("./assets/technology/background-technology-mobile.jpg");
+}
+
+@media (min-width: 35rem) {
+    body.technology{
+        background-position: center center;
+        background-image: url("./assets/technology/background-technology-tablet.jpg");
+    }
+}
+
+@media (min-width: 45rem) {
+    body.technology{
+        background-image: url("./assets/technology/background-technology-desktop.jpg");
+    }
+}
+
+@layer components{
+    .nav-item {
+        @apply text-clr-white font-sans-cond flex-1 text-lg max-sm:text-xl py-8 border-b-4 border-b-clr-white/0 hover:border-b-clr-white/50;
+    }
+    
+    .mobile-nav{
+        @apply text-clr-white font-sans-cond flex-1 text-lg max-sm:text-xl border-l-4 border-l-clr-white/0 hover:border-l-clr-white/50;
+    }
+
+    .mini-header{
+        @apply text-clr-white font-sans-cond max-md:mb-10 max-md:text-center text-2xl uppercase
+    }
+
+    .term{
+        @apply text-clr-light/50 max-md:text-center text-3xl max-sm:text-xl font-serif uppercase leading-tight;
+    }
+
+    .name{
+        @apply text-clr-white  max-md:text-center text-5xl max-sm:text-3xl font-serif uppercase leading-tight;
+    }
+
+    .num{
+        @apply text-clr-light/10 font-semibold mr-2;
+    }
+}
